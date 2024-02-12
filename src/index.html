@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Leaflet offline map</title>
+        <link rel="stylesheet" charset="utf-8" href="leaflet/leaflet.css" />
+        <script type="text/javascript" charset="utf-8" src="leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="map.js"></script>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+<body onload="onLoad();"> <!-- TODO: maybe need to change to not "onLoad", so it updates -->
+
+<span id="time"></span>
+
+<table>
+    <tr>
+        <th><span class="dot" id="check0"></span></th>
+        <th><span class="dot" id="check1"></span></th>
+        <th><span class="dot" id="check2"></span></th>
+        <th><span class="dot" id="check3"></span></th>
+        <th><span class="dot" id="check4"></span></th>
+    </tr>
+    <tr>
+        <th>check 1</th>
+        <th>check 2</th>
+        <th>check 3</th>
+        <th>check 4</th>
+        <th>connection</th>
+    </tr>
+</table>
+
+<div style="width: 400px;"><canvas id="battery-canvas"></canvas></div>
+
+<div style="width: 400px;"><canvas id="height-canvas"></canvas></div>
+
+<div>
+    <canvas width=380 height=150 id="speed-canvas"></canvas>
+    <div id="speed-value" style="font-size: 41px;">157</div>
+    <h2>speed</h2>
+</div>
+
+<div>
+    <canvas width=380 height=150 id="accel-canvas"></canvas>
+    <div id="accel-value" style="font-size: 41px;">0</div>
+    <h2>accel</h2>
+</div>
+
+<div id="mapid" style="height: 500px; width: 500px"></div><br/>
+
+<script src="gauge.js/dist/gauge.js"></script>
+<script src="../node_modules/chart.js/dist/chart.umd.js"></script>
+<script type="text/javascript" src="speed.js"></script>
+<script type="text/javascript" src="accel.js"></script>
+<script type="text/javascript" src="height.js"></script>
+<script type="text/javascript" src="battery.js"></script>
+<script type="text/javascript" src="green_lights.js"></script>
+<script type="text/javascript" src="time.js"></script>
+</body>
+</html>
