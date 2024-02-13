@@ -65,4 +65,4 @@ const height_config = {
 };
 
 const height_ctx = document.getElementById('height-canvas');
-new Chart(height_ctx, height_config);
+let line_chart = new Chart(height_ctx, height_config); //TODO: use AddData from battery

@@ -40,4 +40,6 @@ var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
 gauge.maxValue = 20; // set max gauge value
 gauge.setMinValue(-20);  // Prefer setter over gauge.minValue = 0
 gauge.animationSpeed = 32; // set animation speed (32 is default value)
-gauge.set(0); // set actual value
+function updateAccel(accel) {
+    gauge.set(accel);
+}

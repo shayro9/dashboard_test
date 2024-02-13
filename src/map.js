@@ -1,4 +1,5 @@
-function onLoad() {
+let my_marker, rocket_marker;
+function initMap() {
 
     const mymap = L.map('mapid').setView([32.75, 35.05], 11);
 
@@ -16,6 +17,12 @@ function onLoad() {
         iconSize:     [40, 40], // size of the icon
     });
 
-    var rocket_marker = L.marker([32.75, 35.05], {icon: rocket_icon}).addTo(mymap); //TODO: make it from input
-    var base_marker = L.marker([32.777, 35.022], {icon: baser_icon}).addTo(mymap); //TODO: make it from user GPS
+    rocket_marker = L.marker([0,0], {icon: rocket_icon}).addTo(mymap);
+    my_marker = L.marker([0,0], {icon: baser_icon}).addTo(mymap);
+    updateMarkers([32.75, 35.05], [32.777, 35.022]);
+}
+
+function updateMarkers(rocket_location, my_location) {
+    rocket_marker.setLatLng(rocket_location);
+    my_marker.setLatLng(my_location);
 }

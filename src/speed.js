@@ -1,4 +1,4 @@
-var opts = {
+var speedOpts = {
     angle: 0.10, // The span of the gauge arc
     lineWidth: 0.20, // The line thickness
     radiusScale: 1, // Relative radius
@@ -30,9 +30,11 @@ var opts = {
         fractionDigits: 0  // Optional: Numerical precision. 0=round off.
     },
 };
-var target = document.getElementById('speed-canvas'); // your canvas element
-var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-gauge.maxValue = 300; // set max gauge value
-gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
-gauge.animationSpeed = 32; // set animation speed (32 is default value)
-gauge.set(157); // set actual value
+var speedTarget = document.getElementById('speed-canvas'); // your canvas element
+var speedGauge = new Gauge(speedTarget).setOptions(speedOpts); // create sexy gauge!
+speedGauge.maxValue = 300; // set max gauge value
+speedGauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+speedGauge.animationSpeed = 32; // set animation speed (32 is default value)
+function updateSpeed(newSpeed) {
+    speedGauge.set(newSpeed);
+}

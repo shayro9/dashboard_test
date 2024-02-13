@@ -7,7 +7,7 @@
         <script type="text/javascript" src="map.js"></script>
         <link rel="stylesheet" href="index.css" />
     </head>
-<body onload="onLoad();"> <!-- TODO: maybe need to change to not "onLoad", so it updates -->
+<body>
 
 <span id="time"></span>
 
@@ -34,7 +34,7 @@
 
 <div>
     <canvas width=380 height=150 id="speed-canvas"></canvas>
-    <div id="speed-value" style="font-size: 41px;">157</div>
+    <div id="speed-value" style="font-size: 41px;">0</div>
     <h2>speed</h2>
 </div>
 
@@ -51,8 +51,9 @@
 <script type="text/javascript" src="speed.js"></script>
 <script type="text/javascript" src="accel.js"></script>
 <script type="text/javascript" src="height.js"></script>
-<script type="text/javascript" src="battery.js"></script>
 <script type="text/javascript" src="green_lights.js"></script>
 <script type="text/javascript" src="time.js"></script>
+<script type="text/javascript" src="battery.js"></script>
+<script type="text/javascript" src="update.js"></script>
 </body>
 </html>
