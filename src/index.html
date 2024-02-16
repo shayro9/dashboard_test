@@ -12,39 +12,54 @@
 <span id="time"></span>
 
 <table>
+    <colgroup>
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+        <col width="5%"><col width="5%">
+    </colgroup>
     <tr>
-        <th><span class="dot" id="check0"></span></th>
-        <th><span class="dot" id="check1"></span></th>
-        <th><span class="dot" id="check2"></span></th>
-        <th><span class="dot" id="check3"></span></th>
-        <th><span class="dot" id="check4"></span></th>
+        <td colspan="15"><div id="mapid" style="height: 500px; width: 500px"></div><br/></td>
+        <td colspan="15"><div style="width: 100%;"><canvas id="height-canvas"></canvas></div></td>
     </tr>
     <tr>
-        <th>check 1</th>
-        <th>check 2</th>
-        <th>check 3</th>
-        <th>check 4</th>
-        <th>connection</th>
+        <td colspan="10">
+            <div>
+                <canvas width=380 height=150 id="speed-canvas"></canvas>
+                <div id="speed-value" style="font-size: 41px;">0</div>
+                <h2>speed</h2>
+            </div>
+        </td>
+        <td colspan="10">
+            <div>
+                <canvas width=380 height=150 id="accel-canvas"></canvas>
+                <div id="accel-value" style="font-size: 41px;">0</div>
+                <h2>accel</h2>
+            </div>
+        </td>
+        <td colspan="10"><div style="width: 400px;"><canvas id="battery-canvas"></canvas></div></td>
+    </tr>
+    <tr>
+        <td colspan="5"><span class="dot" id="check0"></span></td>
+        <td colspan="5"><span class="dot" id="check1"></span></td>
+        <td colspan="5"><span class="dot" id="check2"></span></td>
+        <td colspan="5"><span class="dot" id="check3"></span></td>
+        <td colspan="5"><span class="dot" id="check4"></span></td>
+    </tr>
+    <tr>
+        <td colspan="5">check 1</td>
+        <td colspan="5">check 2</td>
+        <td colspan="5">check 3</td>
+        <td colspan="5">check 4</td>
+        <td colspan="5">connection</td>
     </tr>
 </table>
-
-<div style="width: 400px;"><canvas id="battery-canvas"></canvas></div>
-
-<div style="width: 400px;"><canvas id="height-canvas"></canvas></div>
-
-<div>
-    <canvas width=380 height=150 id="speed-canvas"></canvas>
-    <div id="speed-value" style="font-size: 41px;">0</div>
-    <h2>speed</h2>
-</div>
-
-<div>
-    <canvas width=380 height=150 id="accel-canvas"></canvas>
-    <div id="accel-value" style="font-size: 41px;">0</div>
-    <h2>accel</h2>
-</div>
-
-<div id="mapid" style="height: 500px; width: 500px"></div><br/>
 
 <script src="gauge.js/dist/gauge.js"></script>
 <script src="../node_modules/chart.js/dist/chart.umd.js"></script>
