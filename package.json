@@ -1,6 +1,25 @@
 {
   "dependencies": {
     "chart.js": "^4.4.1",
-    "chartjs": "^0.3.24"
-  }
+    "chartjs": "^0.3.24",
+    "express": "^4.18.3",
+    "node.js": "^0.0.1-security"
+  },
+  "name": "dashboard_test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shayro9/dashboard_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shayro9/dashboard_test/issues"
+  },
+  "homepage": "https://github.com/shayro9/dashboard_test#readme",
+  "description": ""
 }
